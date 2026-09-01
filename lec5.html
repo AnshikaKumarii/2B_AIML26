@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   let ABES= {
+    p_Id: 101,
+    p_Name: "Laptop",
+    p_price: 50000,
+    p_quantity: 2,
+     TotalPrice: function () {
+        return this.price * this.quantity
+    },
+    updateQuantity: function (newQuantity) {
+        this.quantity = newQuantity;
+    },
+    ProductInfo: function () {
+        console.log("Product ID: " + this.p_Id);
+        console.log("Product Name: " + this.p_Name);
+        console.log("Price: ₹" + this.p_price);
+        console.log("Quantity: " + this.p_quantity);
+        console.log("Total Price: ₹" + this.TotalPrice());
+    },
+};
+
+ABES.ProductInfo();
+ABES.updateQuantity(5);
+ 
+ </script>
+</body>
+</html>
