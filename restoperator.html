@@ -7,11 +7,10 @@
 </head>
 <body>
     <script>
-        // function sum(...values){
-        //     console.log(values)
-        // }
-        // sum(10,20)
-        // sum(10,100,1000)
+        function sum(name,...values){
+            console.log(values)
+        }
+        console.log(sum("anshika",10,20,30))
         function sum(...values){
             let total=0
             for(let n of values){
@@ -19,7 +18,13 @@
             }
             return total;
         }
-        sum(10,20,30)
+        console.log(sum(10,20,30))
+        let arr=[10,20,30]
+        function Sum(...arr){
+        arr.push(40);
+        }
+        console.log(arr)
+    
     </script>
 </body>
 </html>
