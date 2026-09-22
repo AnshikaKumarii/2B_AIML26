@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      class product{
+         constructor(productid,productname,price){
+            this.productid=productid;
+            this.productname=productname;
+            this.price=price;
+         }
+         getdiscountedprice(discount){
+               return this.price-(this.price*discount)/100;
+         }
+         display(){
+            console.log("product id :",this.productid)
+            console.log("product name :",this.productname)
+            console.log("product price :",this.price)
+         }
+         static compareproducts(p1,p2){
+            if(p1.price>p2.price){
+                console.log(p1.productname,"has higher price")
+
+            }else if(p2.price>p1.price){
+                console.log(p2.price,"has higher price")
+            }else{
+                console.log("both has same price")
+            }
+         } }  
+      class electronics extends product{
+            constructor(productid,productname,price,warranty){
+            super(productid,productname,price);
+             this.warranty=warranty;
+            }
+         
+         display(){
+            super.display();
+            console.log("warranty",this.warranty,"years");
+         }
+         }
+         let p1=new electronics(101,"laptop",6000,2)
+         let p2=new electronics(102,"tv",50000,5);
+        p1.display();
+         console.log(p1.getdiscountedprice(10));
+         p2.display();
+         console.log(p2.getdiscountedprice(5));
+         product.compareproducts(p1,p2);
+        
+       
+   </script>
+
+</body>
+</html>
